@@ -6,145 +6,348 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="view-transition" content="same-origin" />
   <meta name="description"
-    content="Meet Faiz Syauqi — IT Student, casual gamer, and aspiring developer. Explore my biography, skills, and latest projects." />
-  <title>Faiz Syauqi — IT Student &amp; Casual Gamer</title>
+    content="Faiz Syauqi, IT student at UiTM working across UI/UX design and full-stack development. Featured project: Limited Focus, Silver Medal at KL3IS 2025." />
+  <meta name="theme-color" content="#0D1320" />
+  <title>Faiz Syauqi | IT Student, UI/UX &amp; Full-Stack Development</title>
   <link rel="icon" type="image/png" href="My Landing Page Logo.png" />
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="preload" as="image" href="portrait.webp" type="image/webp" />
+  <link rel="stylesheet" href="site.css" />
+
+  <!-- Hide animated elements before first paint, but only when motion will actually run. -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      // Safety net: if the animation libraries never load, show everything.
+      setTimeout(function () {
+        if (!window.gsap) document.documentElement.classList.remove('motion');
+      }, 2500);
+    }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ======== HEADER ======== -->
-  <header class="header">
-    <div class="container">
-      <div class="header__logo">
-        <div class="header__logo-img">
-          <img src="My Landing Page Logo.png" alt="Logo">
-        </div>
-        <span class="header__title">Meet Faiz Syauqi: An IT Student &amp; Casual Gamer</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Faiz Syauqi, home">
+        <img src="My Landing Page Logo.png" alt="" width="28" height="28" />
+        <span>Faiz Syauqi</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#work">Work</a>
         <a href="biography.html">Biography</a>
         <a href="projects.html">Projects</a>
+        <a class="nav__email" href="mailto:faizsyq@gmail.com">Email me</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="floating-shapes">
-      <div class="floating-shape floating-shape--1"></div>
-      <div class="floating-shape floating-shape--2"></div>
-      <div class="floating-shape floating-shape--3"></div>
-      <div class="floating-shape floating-shape--4"></div>
-      <div class="floating-shape floating-shape--5"></div>
-      <div class="floating-shape floating-shape--6"></div>
-      <div class="floating-shape floating-shape--7"></div>
-      <div class="floating-shape floating-shape--8"></div>
-    </div>
-    <div class="container">
-      <div class="hero__text-content">
-        <h1>Hi, I'm <span class="gradient-text typewriter">Faiz Syauqi</span></h1>
-        <p class="hero__tagline">An IT student with a passion for technology and a love for gaming. I build things for
-          the
-          web and enjoy exploring new tech.</p>
+  <main id="main">
 
-        <div class="hero__cta">
-          <a href="biography.html" class="btn btn--primary">About Me</a>
-          <a href="projects.html" class="btn btn--outline">View Projects</a>
+    <!-- ======== HERO ======== -->
+    <section class="hero" aria-labelledby="hero-name">
+      <h1 class="hero__name" id="hero-name" aria-label="Faiz Syauqi">
+        <span class="word" aria-hidden="true">Faiz</span><span class="word" aria-hidden="true">Syauqi</span>
+      </h1>
+
+      <div class="hero__portrait">
+        <picture>
+          <source srcset="portrait.webp" type="image/webp" />
+          <img src="portrait.png" alt="Portrait of Faiz Syauqi" width="819" height="1339" fetchpriority="high" />
+        </picture>
+        <div class="brackets hero__focus" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+
+      <div class="hero__intro">
+        <p class="hero__role">IT Student <span class="dot">·</span> UI/UX &amp; Full-Stack Development</p>
+        <p class="hero__lede">I'm studying for a Bachelor of Information Technology (Hons.) at UiTM. I design app
+          interfaces, build web systems end to end, and work with the databases behind them.</p>
+        <a class="award" href="#limited-focus">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="9" r="6" />
+            <path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1" />
+          </svg>
+          Silver Medal · KL3IS 2025 <span>Limited Focus</span>
+        </a>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            See my work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn" href="mailto:faizsyq@gmail.com">faizsyq@gmail.com</a>
+          <a class="icon-link" href="http://www.linkedin.com/in/ahmad-faiz-syauqi-bin-mohd-fauzi-8570093b0"
+            target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a class="icon-link" href="https://github.com/faizsyq" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
         </div>
       </div>
 
-      <div class="hero__image-wrapper">
-        <div class="hero__avatar">
-          <img src="My Profile Pic.jpeg" alt="Faiz Syauqi">
+      <div class="hero__meta" aria-hidden="true">
+        <span class="label scroll-cue">Scroll <span class="scroll-cue__line"></span></span>
+      </div>
+    </section>
+
+    <!-- ======== 01 / WORK ======== -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-head__num">01</span>
+          <span class="label">Selected work</span>
+          <span class="sec-head__rule"></span>
+          <span class="label sec-head__aside">Group assignments + 1 competition entry</span>
+        </div>
+        <div class="work__intro">
+          <h2 class="sec-title" id="work-title" data-reveal>Designed, built, <em>awarded.</em></h2>
+          <p class="work__note" data-reveal>Four university projects across app design, a full-stack web system and
+            the databases behind it. All four were team projects.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ======== SUMMARY CARDS ======== -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title reveal">At a Glance</h2>
-      <p class="section-subtitle reveal">A quick snapshot of who I am and what I do.</p>
+      <div class="work__stage">
+        <div class="work__track">
 
-      <div class="summary-cards">
+          <!-- Limited Focus (featured) -->
+          <article class="panel panel--feature" id="limited-focus" data-reveal>
+            <div class="panel__text">
+              <div class="panel__top">
+                <span class="panel__num">01</span>
+                <span class="panel__medal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <circle cx="12" cy="9" r="6" />
+                    <path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1" />
+                  </svg>
+                  Silver Medal · KL3IS 2025
+                </span>
+              </div>
+              <h3 class="panel__title"><a href="projects.html#limited-focus">Limited Focus</a></h3>
+              <p class="label panel__meta">ICT554 · Group assignment · KL3IS 2025 entry</p>
+              <p class="panel__desc">A support app for OKU (persons with disabilities). It brings job listings, NGO
+                support, emergency contacts, a community space and an education hub into one place.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>UI/UX design</li>
+                <li>Canva</li>
+              </ul>
+              <span class="panel__cta" aria-hidden="true">View the full case
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </div>
+            <div class="plate">
+              <img class="phone" src="images/Limited%20Focus/LF%20Main%20Page.png" alt="Limited Focus home screen"
+                loading="lazy" decoding="async" width="1080" height="1920" />
+              <img class="phone" src="images/Limited%20Focus/LF%20Job%20Listings%20page.png"
+                alt="Limited Focus job listings screen" loading="lazy" decoding="async" width="1080" height="1920" />
+              <img class="phone" src="images/Limited%20Focus/LF%20Emergency%20page.png"
+                alt="Limited Focus emergency screen" loading="lazy" decoding="async" width="1080" height="1920" />
+              <div class="brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </article>
 
-        <!-- Card 1 -->
-        <div class="card reveal reveal-delay-1">
-          <div class="card__icon">🎓</div>
-          <h3>IT Student</h3>
-          <p>Currently pursuing a degree in Information Technology, learning everything from web development to system
-            administration.</p>
+          <!-- DWASPA -->
+          <article class="panel" data-reveal>
+            <div class="panel__text">
+              <div class="panel__top"><span class="panel__num">02</span></div>
+              <h3 class="panel__title"><a href="projects.html#dwaspa">DWASPA</a></h3>
+              <p class="label panel__meta">CSC584 · Group assignment</p>
+              <p class="panel__desc">A full-stack web app for a spa and wellness business, with front end, back end
+                and database. Customers sign up, book and pay. Management sees bookings, services and finances.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>Java EE</li>
+                <li>JSP</li>
+                <li>HTML/CSS</li>
+                <li>Database</li>
+              </ul>
+              <span class="panel__cta" aria-hidden="true">View project
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </div>
+            <div class="plate">
+              <img class="screen" src="images/DWASPA/DWASPA%20Customer%20Dashboard.png"
+                alt="DWASPA customer dashboard showing bookings and payment status" loading="lazy" decoding="async"
+                width="1916" height="908" />
+              <div class="brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </article>
+
+          <!-- FreshDash -->
+          <article class="panel" data-reveal>
+            <div class="panel__text">
+              <div class="panel__top"><span class="panel__num">03</span></div>
+              <h3 class="panel__title"><a href="projects.html#freshdash">FreshDash</a></h3>
+              <p class="label panel__meta">ICT552 · Group assignment</p>
+              <p class="panel__desc">A grocery shopping app UI with an AI meal planner. It covers sign-up, browsing,
+                cart, checkout and order tracking.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>UI/UX design</li>
+                <li>Canva</li>
+              </ul>
+              <span class="panel__cta" aria-hidden="true">View project
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </div>
+            <div class="plate">
+              <img class="phone" src="images/FreshDash/Home%20page.png" alt="FreshDash home screen" loading="lazy"
+                decoding="async" width="1080" height="1920" />
+              <img class="phone" src="images/FreshDash/AI-Powered%20Meal%20Planner.png"
+                alt="FreshDash AI meal planner screen" loading="lazy" decoding="async" width="1080" height="1920" />
+              <div class="brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </article>
+
+          <!-- D'WanaConnect -->
+          <article class="panel" data-reveal>
+            <div class="panel__text">
+              <div class="panel__top"><span class="panel__num">04</span></div>
+              <h3 class="panel__title"><a href="projects.html#dwanaconnect">D'WanaConnect</a></h3>
+              <p class="label panel__meta">ISP640 · Group assignment</p>
+              <p class="panel__desc">A management system UI for D'Wana Spa: a public site, a customer booking flow,
+                and separate dashboards for staff and admin.</p>
+              <ul class="tags" aria-label="Tools">
+                <li>UI/UX design</li>
+                <li>Canva</li>
+              </ul>
+              <span class="panel__cta" aria-hidden="true">View project
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </div>
+            <div class="plate">
+              <img class="screen screen--crop" src="images/D'WanaConnect/Main%20page.png"
+                alt="D'WanaConnect main page" loading="lazy" decoding="async" width="1366" height="3939" />
+              <div class="brackets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </article>
+
+          <!-- All projects -->
+          <article class="panel panel--more" data-reveal>
+            <p class="label">Full galleries</p>
+            <h3 class="panel__title"><a href="projects.html">Every screen, every project</a></h3>
+            <span class="panel__cta" aria-hidden="true">Open projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </span>
+          </article>
+
         </div>
 
-        <!-- Card 2 -->
-        <div class="card reveal reveal-delay-2">
-          <div class="card__icon">💻</div>
-          <h3>Web Enthusiast</h3>
-          <p>I enjoy building websites and experimenting with frontend technologies like HTML, CSS, and JavaScript.</p>
+        <div class="work__progress" aria-hidden="true">
+          <span class="label work__count"><b>01</b> / 04</span>
+          <span class="work__bar"><span></span></span>
+          <span class="label">Scroll</span>
         </div>
-
-        <!-- Card 3 -->
-        <div class="card reveal reveal-delay-3">
-          <div class="card__icon">🎮</div>
-          <h3>Casual Gamer</h3>
-          <p>When I'm not coding, you'll find me gaming. I enjoy a variety of genres from FPS to RPGs and everything in
-            between.</p>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======== FOOTER ======== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__socials">
+    <!-- ======== 02 / ABOUT ======== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-head__num">02</span>
+          <span class="label">About</span>
+          <span class="sec-head__rule"></span>
+          <span class="label sec-head__aside">Design · Development · Data</span>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__body">
+            <h2 class="sec-title" id="about-title" data-reveal>Range, with <em>proof.</em></h2>
+            <p data-reveal>I'm <strong>Faiz Syauqi</strong>, a Bachelor of Information Technology (Hons.) student
+              at UiTM. Before that I did a Foundation in Engineering at UiTM and finished with a 3.56 CGPA.</p>
+            <p data-reveal>My coursework has gone from designing app interfaces in Canva to building a Java EE web app
+              with its own database. One of our team projects, Limited Focus, won a Silver Medal at KL3IS 2025.</p>
+            <a class="text-link" href="biography.html" data-reveal>Read my biography
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+
+          <ul class="range">
+            <li data-reveal>
+              <span class="range__n">A</span>
+              <div>
+                <h3>Design</h3>
+                <p>App and web interfaces: FreshDash, D'WanaConnect and Limited Focus.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="range__n">B</span>
+              <div>
+                <h3>Development</h3>
+                <p>HTML, CSS, JavaScript, Java (OOP, servlets), JSP. Basic C++.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="range__n">C</span>
+              <div>
+                <h3>Data</h3>
+                <p>SQL and MySQL: designing and managing relational databases.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 03 / CONTACT ======== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="sec-head__num">03</span>
+          <span class="label">Contact</span>
+          <span class="sec-head__rule"></span>
+        </div>
+        <h2 class="contact__big" id="contact-title" data-reveal>Let's <em>talk.</em></h2>
+        <div class="contact__row">
+          <div data-reveal>
+            <p class="label" style="margin-bottom:12px">Email is the fastest way to reach me</p>
+            <a class="contact__email" href="mailto:faizsyq@gmail.com">faizsyq@gmail.com</a>
+          </div>
+          <div class="contact__links" data-reveal>
+            <a class="btn" href="http://www.linkedin.com/in/ahmad-faiz-syauqi-bin-mohd-fauzi-8570093b0"
+              target="_blank" rel="noopener noreferrer">LinkedIn
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+            <a class="btn" href="https://github.com/faizsyq" target="_blank" rel="noopener noreferrer">GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Faiz Syauqi</p>
+      <nav aria-label="Elsewhere">
         <a href="https://www.instagram.com/faiz.cokehh?igsh=cGdmNWNmZHV5cHJh&utm_source=qr" target="_blank"
-          rel="noopener noreferrer" class="social--instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-          </svg>
-        </a>
-        <a href="https://www.tiktok.com/@paehcokehh?_r=1&_t=ZS-93uPt2BVgNM" target="_blank" rel="noopener noreferrer"
-          class="social--tiktok" aria-label="TikTok">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.84a4.84 4.84 0 01-1-.15z" />
-          </svg>
-        </a>
-        <a href="https://github.com/faizsyq" target="_blank" rel="noopener noreferrer" class="social--github"
-          aria-label="GitHub">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-          </svg>
-        </a>
-        <a href="http://www.linkedin.com/in/ahmad-faiz-syauqi-bin-mohd-fauzi-8570093b0" target="_blank"
-          rel="noopener noreferrer" class="social--linkedin" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </a>
-      </div>
-      <p>&copy; 2026 <span>Faiz Syauqi</span>. All rights reserved.</p>
+          rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@paehcokehh?_r=1&_t=ZS-93uPt2BVgNM" target="_blank"
+          rel="noopener noreferrer">TikTok</a>
+      </nav>
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal, .timeline').forEach(el => observer.observe(el));
-  </script>
-  <script src="animate-ui.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="site.js"></script>
 </body>
 
 </html>
