@@ -1,0 +1,952 @@
+{
+ "shutterq": [
+  {
+   "src": "assets/projects-web/shutterq/01-home-hero.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/01-home-hero.webp",
+   "w": 1600,
+   "h": 809,
+   "chapter": "Public site",
+   "caption": "Home hero"
+  },
+  {
+   "src": "assets/projects-web/shutterq/02-home-featured-work.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/02-home-featured-work.webp",
+   "w": 1600,
+   "h": 654,
+   "chapter": "Public site",
+   "caption": "Home featured work"
+  },
+  {
+   "src": "assets/projects-web/shutterq/03-home-visit-studio.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/03-home-visit-studio.webp",
+   "w": 1600,
+   "h": 647,
+   "chapter": "Public site",
+   "caption": "Home visit studio"
+  },
+  {
+   "src": "assets/projects-web/shutterq/04-home-full-page.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/04-home-full-page.webp",
+   "w": 1600,
+   "h": 2109,
+   "chapter": "Public site",
+   "caption": "Home full page"
+  },
+  {
+   "src": "assets/projects-web/shutterq/05-about.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/05-about.webp",
+   "w": 1600,
+   "h": 791,
+   "chapter": "Public site",
+   "caption": "About"
+  },
+  {
+   "src": "assets/projects-web/shutterq/06-packages.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/06-packages.webp",
+   "w": 1600,
+   "h": 835,
+   "chapter": "Public site",
+   "caption": "Packages"
+  },
+  {
+   "src": "assets/projects-web/shutterq/07-contact.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/07-contact.webp",
+   "w": 1600,
+   "h": 795,
+   "chapter": "Public site",
+   "caption": "Contact"
+  },
+  {
+   "src": "assets/projects-web/shutterq/08-policy.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/08-policy.webp",
+   "w": 1600,
+   "h": 781,
+   "chapter": "Public site",
+   "caption": "Policy"
+  },
+  {
+   "src": "assets/projects-web/shutterq/09-register.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/09-register.webp",
+   "w": 1600,
+   "h": 807,
+   "chapter": "Public site",
+   "caption": "Register"
+  },
+  {
+   "src": "assets/projects-web/shutterq/10-login.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/10-login.webp",
+   "w": 1600,
+   "h": 819,
+   "chapter": "Public site",
+   "caption": "Login"
+  },
+  {
+   "src": "assets/projects-web/shutterq/11-book-session-choose-package.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/11-book-session-choose-package.webp",
+   "w": 1600,
+   "h": 808,
+   "chapter": "Booking flow",
+   "caption": "Book session choose package"
+  },
+  {
+   "src": "assets/projects-web/shutterq/12-book-session-time-slot-notes.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/12-book-session-time-slot-notes.webp",
+   "w": 1600,
+   "h": 795,
+   "chapter": "Booking flow",
+   "caption": "Book session time slot notes"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-customer-dashboard.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-customer-dashboard.webp",
+   "w": 1600,
+   "h": 768,
+   "chapter": "Booking flow",
+   "caption": "Customer dashboard"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-customer-profile.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-customer-profile.webp",
+   "w": 1600,
+   "h": 650,
+   "chapter": "Booking flow",
+   "caption": "Customer profile"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-dashboard.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-dashboard.webp",
+   "w": 1600,
+   "h": 812,
+   "chapter": "Admin",
+   "caption": "Admin dashboard"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-manage-bookings.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-manage-bookings.webp",
+   "w": 1600,
+   "h": 825,
+   "chapter": "Admin",
+   "caption": "Admin manage bookings"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-manage-bookings-continued.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-manage-bookings-continued.webp",
+   "w": 1600,
+   "h": 798,
+   "chapter": "Admin",
+   "caption": "Admin manage bookings continued"
+  },
+  {
+   "src": "assets/projects-web/shutterq/13-schedules.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/13-schedules.webp",
+   "w": 1600,
+   "h": 796,
+   "chapter": "Admin",
+   "caption": "Schedules"
+  },
+  {
+   "src": "assets/projects-web/shutterq/14-packages-full-page.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/14-packages-full-page.webp",
+   "w": 1600,
+   "h": 1326,
+   "chapter": "Admin",
+   "caption": "Packages full page"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-inquiries.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-inquiries.webp",
+   "w": 1600,
+   "h": 568,
+   "chapter": "Admin",
+   "caption": "Admin inquiries"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-reports.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-reports.webp",
+   "w": 1600,
+   "h": 752,
+   "chapter": "Admin",
+   "caption": "Admin reports"
+  },
+  {
+   "src": "assets/projects-web/shutterq/blurred-admin-reports-continued.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/blurred-admin-reports-continued.webp",
+   "w": 1600,
+   "h": 537,
+   "chapter": "Admin",
+   "caption": "Admin reports continued"
+  },
+  {
+   "src": "assets/projects-web/shutterq/01-wireframe-home.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/01-wireframe-home.webp",
+   "w": 1023,
+   "h": 1537,
+   "chapter": "Design docs",
+   "caption": "Wireframe home"
+  },
+  {
+   "src": "assets/projects-web/shutterq/02-wireframe-about.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/02-wireframe-about.webp",
+   "w": 1430,
+   "h": 1100,
+   "chapter": "Design docs",
+   "caption": "Wireframe about"
+  },
+  {
+   "src": "assets/projects-web/shutterq/03-wireframe-packages.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/03-wireframe-packages.webp",
+   "w": 1474,
+   "h": 1067,
+   "chapter": "Design docs",
+   "caption": "Wireframe packages"
+  },
+  {
+   "src": "assets/projects-web/shutterq/04-wireframe-contact.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/04-wireframe-contact.webp",
+   "w": 1568,
+   "h": 1003,
+   "chapter": "Design docs",
+   "caption": "Wireframe contact"
+  },
+  {
+   "src": "assets/projects-web/shutterq/05-wireframe-policy.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/05-wireframe-policy.webp",
+   "w": 1596,
+   "h": 986,
+   "chapter": "Design docs",
+   "caption": "Wireframe policy"
+  },
+  {
+   "src": "assets/projects-web/shutterq/06-wireframe-register.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/06-wireframe-register.webp",
+   "w": 1568,
+   "h": 1003,
+   "chapter": "Design docs",
+   "caption": "Wireframe register"
+  },
+  {
+   "src": "assets/projects-web/shutterq/07-wireframe-login.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/07-wireframe-login.webp",
+   "w": 1568,
+   "h": 1003,
+   "chapter": "Design docs",
+   "caption": "Wireframe login"
+  },
+  {
+   "src": "assets/projects-web/shutterq/08-wireframe-customer-dashboard.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/08-wireframe-customer-dashboard.webp",
+   "w": 1600,
+   "h": 880,
+   "chapter": "Design docs",
+   "caption": "Wireframe customer dashboard"
+  },
+  {
+   "src": "assets/projects-web/shutterq/09-wireframe-booking.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/09-wireframe-booking.webp",
+   "w": 1023,
+   "h": 1537,
+   "chapter": "Design docs",
+   "caption": "Wireframe booking"
+  },
+  {
+   "src": "assets/projects-web/shutterq/10-wireframe-customer-profile.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/10-wireframe-customer-profile.webp",
+   "w": 1600,
+   "h": 834,
+   "chapter": "Design docs",
+   "caption": "Wireframe customer profile"
+  },
+  {
+   "src": "assets/projects-web/shutterq/11-wireframe-admin-dashboard.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/11-wireframe-admin-dashboard.webp",
+   "w": 1455,
+   "h": 1081,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin dashboard"
+  },
+  {
+   "src": "assets/projects-web/shutterq/12-wireframe-admin-bookings.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/12-wireframe-admin-bookings.webp",
+   "w": 1175,
+   "h": 1338,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin bookings"
+  },
+  {
+   "src": "assets/projects-web/shutterq/13-wireframe-admin-schedules.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/13-wireframe-admin-schedules.webp",
+   "w": 1024,
+   "h": 1536,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin schedules"
+  },
+  {
+   "src": "assets/projects-web/shutterq/14-wireframe-admin-packages.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/14-wireframe-admin-packages.webp",
+   "w": 1184,
+   "h": 1328,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin packages"
+  },
+  {
+   "src": "assets/projects-web/shutterq/15-wireframe-admin-inquiries.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/15-wireframe-admin-inquiries.webp",
+   "w": 1568,
+   "h": 1003,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin inquiries"
+  },
+  {
+   "src": "assets/projects-web/shutterq/16-wireframe-admin-reports.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/16-wireframe-admin-reports.webp",
+   "w": 1402,
+   "h": 1122,
+   "chapter": "Design docs",
+   "caption": "Wireframe admin reports"
+  },
+  {
+   "src": "assets/projects-web/shutterq/17-erd-database-diagram.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/17-erd-database-diagram.webp",
+   "w": 1536,
+   "h": 1024,
+   "chapter": "Design docs",
+   "caption": "Erd database diagram"
+  },
+  {
+   "src": "assets/projects-web/shutterq/18-gantt-chart.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/18-gantt-chart.webp",
+   "w": 1536,
+   "h": 1024,
+   "chapter": "Design docs",
+   "caption": "Gantt chart"
+  },
+  {
+   "src": "assets/projects-web/shutterq/19-use-case-diagram.webp",
+   "thumb": "assets/projects-web/shutterq/thumbs/19-use-case-diagram.webp",
+   "w": 1443,
+   "h": 1090,
+   "chapter": "Design docs",
+   "caption": "Use case diagram"
+  }
+ ],
+ "dominos": [
+  {
+   "src": "assets/projects-web/dominos/01-home.webp",
+   "thumb": null,
+   "w": 131,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Home"
+  },
+  {
+   "src": "assets/projects-web/dominos/02-menu-search.webp",
+   "thumb": null,
+   "w": 131,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Menu search"
+  },
+  {
+   "src": "assets/projects-web/dominos/03-compare-offers.webp",
+   "thumb": null,
+   "w": 129,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Compare offers"
+  },
+  {
+   "src": "assets/projects-web/dominos/04-product-detail.webp",
+   "thumb": null,
+   "w": 132,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Product detail"
+  },
+  {
+   "src": "assets/projects-web/dominos/05-recommendations-favorites.webp",
+   "thumb": null,
+   "w": 131,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Recommendations favorites"
+  },
+  {
+   "src": "assets/projects-web/dominos/06-orders-quick-reorder.webp",
+   "thumb": null,
+   "w": 131,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Orders quick reorder"
+  },
+  {
+   "src": "assets/projects-web/dominos/07-cart-checkout.webp",
+   "thumb": null,
+   "w": 129,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Cart checkout"
+  },
+  {
+   "src": "assets/projects-web/dominos/08-order-tracking.webp",
+   "thumb": null,
+   "w": 132,
+   "h": 299,
+   "chapter": "High-fidelity screens",
+   "caption": "Order tracking"
+  }
+ ],
+ "fittrack": [
+  {
+   "src": "assets/projects-web/fittrack/01-register.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/01-register.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Register"
+  },
+  {
+   "src": "assets/projects-web/fittrack/02-login.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/02-login.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Login"
+  },
+  {
+   "src": "assets/projects-web/fittrack/03-dashboard-overview.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/03-dashboard-overview.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Dashboard overview"
+  },
+  {
+   "src": "assets/projects-web/fittrack/04-dashboard-search-filter.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/04-dashboard-search-filter.webp",
+   "w": 1600,
+   "h": 768,
+   "chapter": "User flow",
+   "caption": "Dashboard search filter"
+  },
+  {
+   "src": "assets/projects-web/fittrack/05-dashboard-activity-type-filter.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/05-dashboard-activity-type-filter.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Dashboard activity type filter"
+  },
+  {
+   "src": "assets/projects-web/fittrack/06-delete-confirmation.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/06-delete-confirmation.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Delete confirmation"
+  },
+  {
+   "src": "assets/projects-web/fittrack/07-add-exercise.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/07-add-exercise.webp",
+   "w": 1600,
+   "h": 764,
+   "chapter": "User flow",
+   "caption": "Add exercise"
+  },
+  {
+   "src": "assets/projects-web/fittrack/08-edit-exercise.webp",
+   "thumb": "assets/projects-web/fittrack/thumbs/08-edit-exercise.webp",
+   "w": 1600,
+   "h": 766,
+   "chapter": "User flow",
+   "caption": "Edit exercise"
+  }
+ ],
+ "limited-focus": [
+  {
+   "src": "assets/projects-web/limited-focus/limited-focus.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/limited-focus.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Limited Focus"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-sign-up-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-sign-up-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Sign Up Page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-main-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-main-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Main Page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-review-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-review-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Review page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-review-filter.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-review-filter.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Review Filter"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-job-listings-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-job-listings-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Job Listings page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-job-vancancy-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-job-vancancy-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Job vacancy Page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-job-description.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-job-description.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Job Description"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-fav-job-vacancy.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-fav-job-vacancy.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Fav Job Vacancy"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-saved-jobs.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-saved-jobs.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Saved Jobs"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-applied-jobs.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-applied-jobs.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Applied Jobs"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-job-listings-messages.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-job-listings-messages.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Job Listings (Messages)"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-ngo-supports-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-ngo-supports-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "NGO Supports page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-ngo-support-description.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-ngo-support-description.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "NGO Support Description"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-applied-supports.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-applied-supports.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Applied Supports"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-emergency-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-emergency-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Emergency page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-emergency-contacts.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-emergency-contacts.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Emergency Contacts"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-emergency-setting.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-emergency-setting.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Emergency Setting"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-community-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-community-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Community page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-community-post.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-community-post.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Community Post"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-community-comment.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-community-comment.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Community Comment"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-education-hub-page.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-education-hub-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Education Hub page"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-education-hub-description.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-education-hub-description.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Education Hub Description"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-my-course.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-my-course.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "My Course"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-chatbox.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-chatbox.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Chatbox"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-profile.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-profile.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Profile"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-medical-information.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-medical-information.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Medical Information"
+  },
+  {
+   "src": "assets/projects-web/limited-focus/lf-conditions.webp",
+   "thumb": "assets/projects-web/limited-focus/thumbs/lf-conditions.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Conditions"
+  }
+ ],
+ "dwaspa": [
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-logo.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-logo.webp",
+   "w": 1024,
+   "h": 1024,
+   "chapter": "Screens",
+   "caption": "Logo"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-login.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-login.webp",
+   "w": 1600,
+   "h": 760,
+   "chapter": "Screens",
+   "caption": "Login"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-customer-create-acc.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-customer-create-acc.webp",
+   "w": 1600,
+   "h": 759,
+   "chapter": "Screens",
+   "caption": "Customer Create Acc"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-customer-dashboard.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-customer-dashboard.webp",
+   "w": 1600,
+   "h": 758,
+   "chapter": "Screens",
+   "caption": "Customer Dashboard"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-customer-booking.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-customer-booking.webp",
+   "w": 1600,
+   "h": 759,
+   "chapter": "Screens",
+   "caption": "Customer Booking"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-customer-payment.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-customer-payment.webp",
+   "w": 1600,
+   "h": 761,
+   "chapter": "Screens",
+   "caption": "Customer Payment"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-management-dashboard.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-management-dashboard.webp",
+   "w": 1600,
+   "h": 759,
+   "chapter": "Screens",
+   "caption": "Management Dashboard"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-service-management.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-service-management.webp",
+   "w": 1600,
+   "h": 759,
+   "chapter": "Screens",
+   "caption": "Service Management"
+  },
+  {
+   "src": "assets/projects-web/dwaspa/dwaspa-management-financial.webp",
+   "thumb": "assets/projects-web/dwaspa/thumbs/dwaspa-management-financial.webp",
+   "w": 1159,
+   "h": 783,
+   "chapter": "Screens",
+   "caption": "Management Financial"
+  }
+ ],
+ "freshdash": [
+  {
+   "src": "assets/projects-web/freshdash/freshdash-logo.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/freshdash-logo.webp",
+   "w": 833,
+   "h": 625,
+   "chapter": "Screens",
+   "caption": "FreshDash Logo"
+  },
+  {
+   "src": "assets/projects-web/freshdash/splash-screen.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/splash-screen.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Splash Screen"
+  },
+  {
+   "src": "assets/projects-web/freshdash/splash-screen-2.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/splash-screen-2.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Splash Screen (2)"
+  },
+  {
+   "src": "assets/projects-web/freshdash/login-register-page.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/login-register-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Login & Register page"
+  },
+  {
+   "src": "assets/projects-web/freshdash/home-page.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/home-page.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Home page"
+  },
+  {
+   "src": "assets/projects-web/freshdash/product-details.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/product-details.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Product Details"
+  },
+  {
+   "src": "assets/projects-web/freshdash/shopping-cart.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/shopping-cart.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Shopping Cart"
+  },
+  {
+   "src": "assets/projects-web/freshdash/cheeckout.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/cheeckout.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Checkout"
+  },
+  {
+   "src": "assets/projects-web/freshdash/order-confirmation.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/order-confirmation.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Order Confirmation"
+  },
+  {
+   "src": "assets/projects-web/freshdash/order-tracking.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/order-tracking.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "Order Tracking"
+  },
+  {
+   "src": "assets/projects-web/freshdash/user-profile.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/user-profile.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "User Profile"
+  },
+  {
+   "src": "assets/projects-web/freshdash/ai-powered-meal-planner.webp",
+   "thumb": "assets/projects-web/freshdash/thumbs/ai-powered-meal-planner.webp",
+   "w": 1080,
+   "h": 1920,
+   "chapter": "Screens",
+   "caption": "AI Powered Meal Planner"
+  }
+ ],
+ "dwanaconnect": [
+  {
+   "src": "assets/projects-web/dwanaconnect/dwanaconnect-logo.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/dwanaconnect-logo.webp",
+   "w": 1600,
+   "h": 873,
+   "chapter": "Screens",
+   "caption": "D'WanaConnect Logo"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/main-page.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/main-page.webp",
+   "w": 1366,
+   "h": 3939,
+   "chapter": "Screens",
+   "caption": "Main page"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/customer-account-registration-login.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/customer-account-registration-login.webp",
+   "w": 1366,
+   "h": 867,
+   "chapter": "Screens",
+   "caption": "Customer Account Registration & Login"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/customers-dashboard.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/customers-dashboard.webp",
+   "w": 1366,
+   "h": 974,
+   "chapter": "Screens",
+   "caption": "Customer's Dashboard"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/booking-services.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/booking-services.webp",
+   "w": 1366,
+   "h": 780,
+   "chapter": "Screens",
+   "caption": "Booking (Services)"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/booking-therapist.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/booking-therapist.webp",
+   "w": 1366,
+   "h": 780,
+   "chapter": "Screens",
+   "caption": "Booking (Therapist)"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/booking-date-time.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/booking-date-time.webp",
+   "w": 1366,
+   "h": 780,
+   "chapter": "Screens",
+   "caption": "Booking (Date & Time)"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/booking-health-screening-form.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/booking-health-screening-form.webp",
+   "w": 1366,
+   "h": 780,
+   "chapter": "Screens",
+   "caption": "Booking (Health Screening Form)"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/booking-order-summary-payment.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/booking-order-summary-payment.webp",
+   "w": 1366,
+   "h": 780,
+   "chapter": "Screens",
+   "caption": "Booking (Order Summary & Payment)"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/staffs-dashboard.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/staffs-dashboard.webp",
+   "w": 1366,
+   "h": 1132,
+   "chapter": "Screens",
+   "caption": "Staff's Dashboard"
+  },
+  {
+   "src": "assets/projects-web/dwanaconnect/admins-dashboard.webp",
+   "thumb": "assets/projects-web/dwanaconnect/thumbs/admins-dashboard.webp",
+   "w": 1366,
+   "h": 1576,
+   "chapter": "Screens",
+   "caption": "Admin's Dashboard"
+  }
+ ]
+}

@@ -16,7 +16,7 @@
   if (!hasGsap) root.classList.remove('motion');
 
   /* ============================================================
-     Gallery lightbox (projects page). Works without GSAP.
+     Project detail view (projects page). Works without GSAP.
   ============================================================ */
   let lenis = null;
   initLightbox();
@@ -334,7 +334,8 @@
           });
 
           // screenshots drift a little against the card for depth
-          gsap.fromTo(plate.querySelectorAll('img'), { xPercent: 4 }, {
+          const drift = plate.querySelectorAll(':scope > img');
+          if (drift.length) gsap.fromTo(drift, { xPercent: 4 }, {
             xPercent: -4, ease: 'none',
             scrollTrigger: { trigger: panel, containerAnimation: scroller, start: 'left right', end: 'right left', scrub: true },
           });
@@ -362,7 +363,8 @@
 
         // screenshots drift upward inside each card while it is on screen
         stackCards.forEach((card) => {
-          const imgs = card.querySelectorAll('.plate img');
+          const imgs = card.querySelectorAll('.plate > img, .plate > figure, .plate .device');
+          if (!imgs.length) return;
           gsap.fromTo(imgs, { yPercent: 5 }, {
             yPercent: -3, ease: 'none',
             scrollTrigger: { trigger: card, start: 'top bottom', end: 'top top', scrub: true },
@@ -397,102 +399,217 @@
   window.addEventListener('load', () => ScrollTrigger.refresh());
 
   /* ============================================================
-     Lightbox implementation
+     Project detail view ("sheet"): gallery + project info.
+     Opened by [data-project="id"]; screens come from window.PROJECT_GALLERIES,
+     info from <template id="sheet-id">. Works without GSAP.
   ============================================================ */
   function initLightbox() {
     const lb = document.getElementById('lightbox');
+    const data = window.PROJECT_GALLERIES || {};
     if (!lb) return;
 
     const panel = lb.querySelector('.lightbox__panel');
+    const stage = lb.querySelector('.lightbox__stage');
+    const info = lb.querySelector('.lightbox__info');
     const img = document.getElementById('lb-img');
-    const titleEl = document.getElementById('lb-title');
-    const descEl = document.getElementById('lb-desc');
-    const tagsEl = document.getElementById('lb-tags');
+    const caption = document.getElementById('lb-caption');
+    const devicesEl = document.getElementById('lb-devices');
+    const chaptersEl = document.getElementById('lb-chapters');
     const thumbsEl = document.getElementById('lb-thumbs');
+    const bodyEl = document.getElementById('lb-body');
     const curEl = document.getElementById('lb-current');
     const totalEl = document.getElementById('lb-total');
     const closeBtn = lb.querySelector('.lightbox__close');
     const prevBtn = lb.querySelector('.lightbox__nav--prev');
     const nextBtn = lb.querySelector('.lightbox__nav--next');
 
-    let images = [];
+    let items = [];
     let index = 0;
     let title = '';
     let opener = null;
-    const animate = () => window.gsap && !reduce;
+    let token = 0; // guards against out-of-order image loads
+    const animate = () => !!window.gsap && !reduce;
+    const pad = (n) => String(n).padStart(2, '0');
 
-    function show(i) {
-      index = (i + images.length) % images.length;
-      const src = images[index];
-      const swap = () => {
-        img.src = src;
-        img.alt = title + ', screen ' + (index + 1) + ' of ' + images.length;
-      };
-      if (animate()) {
-        gsap.to(img, {
-          opacity: 0, duration: 0.15, ease: 'power1.in',
-          onComplete: () => { swap(); gsap.fromTo(img, { opacity: 0, scale: 0.98 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'expo.out' }); },
-        });
-      } else {
-        swap();
-      }
-      curEl.textContent = String(index + 1).padStart(2, '0');
+    function load(src) {
+      return new Promise((resolve) => {
+        const pre = new Image();
+        pre.onload = pre.onerror = () => resolve();
+        pre.src = src;
+        if (pre.decode) pre.decode().then(resolve, resolve);
+      });
+    }
+
+    function setImage(it) {
+      img.src = it.src;
+      img.width = it.w;
+      img.height = it.h;
+      img.alt = title + ': ' + it.caption;
+    }
+
+    function syncUi() {
+      const it = items[index];
+      curEl.textContent = pad(index + 1);
+      caption.textContent = (it.chapter ? it.chapter + ' · ' : '') + it.caption;
       thumbsEl.querySelectorAll('button').forEach((b, n) => {
         const on = n === index;
         b.setAttribute('aria-current', on ? 'true' : 'false');
-        if (on) b.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        if (on) {
+          // keep the active thumb in view without moving the page
+          const left = b.offsetLeft - (thumbsEl.clientWidth - b.offsetWidth) / 2;
+          thumbsEl.scrollTo({ left, behavior: reduce ? 'auto' : 'smooth' });
+        }
       });
-      // warm the next image
-      const pre = new Image();
-      pre.src = images[(index + 1) % images.length];
+      chaptersEl.querySelectorAll('button').forEach((b) => {
+        b.setAttribute('aria-pressed', b.dataset.chapter === it.chapter ? 'true' : 'false');
+      });
+    }
+
+    function show(i, dir) {
+      if (!items.length) return;
+      index = (i + items.length) % items.length;
+      const it = items[index];
+      const my = ++token;
+      syncUi();
+
+      if (animate()) {
+        const d = dir || 1;
+        gsap.killTweensOf(img);
+        gsap.to(img, { opacity: 0, x: -24 * d, duration: 0.18, ease: 'power2.in' });
+        load(it.src).then(() => {
+          if (my !== token) return;
+          gsap.killTweensOf(img);
+          setImage(it);
+          gsap.fromTo(img, { opacity: 0, x: 40 * d, scale: 0.985 },
+            { opacity: 1, x: 0, scale: 1, duration: 0.7, ease: 'expo.out' });
+        });
+      } else {
+        setImage(it);
+      }
+      // warm the next screen
+      if (items.length > 1) load(items[(index + 1) % items.length].src);
+    }
+
+    function buildThumbs() {
+      thumbsEl.innerHTML = '';
+      items.forEach((it, n) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Show ' + it.caption);
+        const t = document.createElement('img');
+        t.src = it.thumb || it.src;
+        t.alt = '';
+        t.loading = 'lazy';
+        t.decoding = 'async';
+        b.appendChild(t);
+        b.addEventListener('click', () => show(n, n >= index ? 1 : -1));
+        thumbsEl.appendChild(b);
+      });
+    }
+
+    function buildChapters() {
+      chaptersEl.innerHTML = '';
+      const names = [...new Set(items.map((it) => it.chapter).filter(Boolean))];
+      chaptersEl.hidden = names.length < 2;
+      names.forEach((name) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.dataset.chapter = name;
+        const label = document.createElement('span');
+        label.textContent = name;
+        const count = document.createElement('b');
+        count.textContent = items.filter((it) => it.chapter === name).length;
+        b.append(label, count);
+        b.addEventListener('click', () => {
+          const first = items.findIndex((it) => it.chapter === name);
+          show(first, first >= index ? 1 : -1);
+        });
+        chaptersEl.appendChild(b);
+      });
+    }
+
+    function buildDevices() {
+      devicesEl.innerHTML = '';
+      items.forEach((it) => {
+        const f = document.createElement('figure');
+        f.className = 'device';
+        const t = document.createElement('img');
+        // native size: these exports are tiny, so they are never scaled up
+        t.src = it.src;
+        t.width = it.w;
+        t.height = it.h;
+        t.alt = title + ': ' + it.caption;
+        t.decoding = 'async';
+        const c = document.createElement('figcaption');
+        c.className = 'label';
+        c.textContent = it.caption;
+        f.append(t, c);
+        devicesEl.appendChild(f);
+      });
     }
 
     function open(btn) {
+      const id = btn.dataset.project;
+      const tpl = document.getElementById('sheet-' + id);
+      const list = data[id] || [];
+      if (!list.length || !tpl) return;
+      items = list;
       opener = btn;
-      title = btn.dataset.title || '';
-      images = (btn.dataset.images || '').split(',').map((s) => encodeURI(s.trim())).filter(Boolean);
-      if (!images.length) return;
 
-      titleEl.textContent = title;
-      descEl.textContent = btn.dataset.description || '';
-      tagsEl.innerHTML = '';
-      (btn.dataset.tags || '').split(',').map((t) => t.trim()).filter(Boolean).forEach((t) => {
-        const li = document.createElement('li');
-        li.textContent = t;
-        tagsEl.appendChild(li);
-      });
-      totalEl.textContent = String(images.length).padStart(2, '0');
+      bodyEl.innerHTML = '';
+      bodyEl.appendChild(tpl.content.cloneNode(true));
+      const h = bodyEl.querySelector('h2');
+      title = h ? h.textContent.trim() : '';
 
-      thumbsEl.innerHTML = '';
-      images.forEach((src, n) => {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('aria-label', 'Show screen ' + (n + 1));
-        const t = document.createElement('img');
-        t.src = src;
-        t.alt = '';
-        t.loading = 'lazy';
-        b.appendChild(t);
-        b.addEventListener('click', () => show(n));
-        thumbsEl.appendChild(b);
-      });
+      const devices = id === 'dominos';
+      const landscape = items.filter((it) => it.w > it.h).length > items.length / 2;
+      lb.classList.toggle('is-devices', devices);
+      lb.classList.toggle('is-landscape', landscape);
+      devicesEl.hidden = !devices;
+      img.hidden = devices;
+      caption.hidden = devices;
+      curEl.parentElement.hidden = devices;
+      totalEl.textContent = pad(items.length);
 
-      const multi = images.length > 1;
+      const multi = items.length > 1 && !devices;
       prevBtn.hidden = !multi;
       nextBtn.hidden = !multi;
+
+      if (devices) {
+        buildDevices();
+        thumbsEl.innerHTML = '';
+        chaptersEl.innerHTML = '';
+        chaptersEl.hidden = true;
+      } else {
+        buildThumbs();
+        buildChapters();
+      }
 
       lb.hidden = false;
       root.classList.add('lb-open');
       if (lenis) lenis.stop();
-      index = 0;
-      img.src = images[0];
-      img.alt = title + ', screen 1 of ' + images.length;
-      curEl.textContent = '01';
-      thumbsEl.querySelectorAll('button').forEach((b, n) => b.setAttribute('aria-current', n === 0 ? 'true' : 'false'));
+      info.scrollTop = 0;
+      devicesEl.scrollTop = 0;
+
+      if (!devices) {
+        index = 0;
+        token++;
+        if (animate()) { gsap.killTweensOf(img); gsap.set(img, { opacity: 1, x: 0, scale: 1 }); }
+        setImage(items[0]);
+        thumbsEl.scrollLeft = 0;
+        syncUi();
+        if (items.length > 1) load(items[1].src);
+      }
 
       if (animate()) {
         gsap.fromTo(lb, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'none' });
-        gsap.fromTo(panel, { y: 30, scale: 0.98 }, { y: 0, scale: 1, duration: 0.7, ease: 'expo.out' });
+        gsap.fromTo(panel, { y: 40, scale: 0.97 }, { y: 0, scale: 1, duration: 0.8, ease: 'expo.out' });
+        gsap.fromTo(bodyEl.children, { y: 18, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8, ease: 'expo.out', stagger: 0.04, delay: 0.12, clearProps: 'transform,opacity' });
+        if (devices) {
+          gsap.fromTo(devicesEl.children, { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.9, ease: 'expo.out', stagger: 0.05, delay: 0.15, clearProps: 'transform,opacity' });
+        }
       }
       closeBtn.focus();
     }
@@ -510,7 +627,7 @@
         if (opener) opener.focus();
       };
       if (animate()) {
-        gsap.to(panel, { y: 20, scale: 0.98, duration: 0.25, ease: 'power2.in' });
+        gsap.to(panel, { y: 24, scale: 0.98, duration: 0.25, ease: 'power2.in' });
         gsap.to(lb, { opacity: 0, duration: 0.25, ease: 'none', onComplete: done });
         setTimeout(done, 450); // never leave the page locked if the tween is interrupted
       } else {
@@ -518,22 +635,25 @@
       }
     }
 
-    document.querySelectorAll('[data-gallery]').forEach((btn) => {
+    document.querySelectorAll('[data-project]').forEach((btn) => {
       btn.addEventListener('click', () => open(btn));
     });
     closeBtn.addEventListener('click', close);
-    prevBtn.addEventListener('click', () => show(index - 1));
-    nextBtn.addEventListener('click', () => show(index + 1));
+    prevBtn.addEventListener('click', () => show(index - 1, -1));
+    nextBtn.addEventListener('click', () => show(index + 1, 1));
     lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+
+    const canStep = () => items.length > 1 && !lb.classList.contains('is-devices');
 
     document.addEventListener('keydown', (e) => {
       if (lb.hidden) return;
       if (e.key === 'Escape') { e.preventDefault(); close(); }
-      else if (e.key === 'ArrowRight' && images.length > 1) show(index + 1);
-      else if (e.key === 'ArrowLeft' && images.length > 1) show(index - 1);
+      else if (e.key === 'ArrowRight' && canStep()) { e.preventDefault(); show(index + 1, 1); }
+      else if (e.key === 'ArrowLeft' && canStep()) { e.preventDefault(); show(index - 1, -1); }
       else if (e.key === 'Tab') {
         // keep focus inside the dialog
-        const f = [...lb.querySelectorAll('button:not([hidden])')];
+        const f = [...lb.querySelectorAll('button, a[href]')].filter((el) => !el.hidden && el.offsetParent !== null);
+        if (!f.length) return;
         const first = f[0];
         const last = f[f.length - 1];
         if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
@@ -541,13 +661,15 @@
       }
     });
 
-    // basic swipe on touch screens
+    // swipe on touch screens
     let x0 = null;
-    img.parentElement.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
-    img.parentElement.addEventListener('touchend', (e) => {
-      if (x0 === null || images.length < 2) return;
+    let y0 = null;
+    stage.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    stage.addEventListener('touchend', (e) => {
+      if (x0 === null || !canStep()) return;
       const dx = e.changedTouches[0].clientX - x0;
-      if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+      const dy = e.changedTouches[0].clientY - y0;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(index + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
       x0 = null;
     });
   }

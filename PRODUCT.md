@@ -29,10 +29,12 @@ Breadth backed by real coursework and recognition. Faiz is a well-rounded IT stu
 ## Capabilities and Constraints
 
 - Static HTML/CSS/vanilla JS. No build step and no framework. Pages: `index.html` (Home), `biography.html`, `projects.html`. Shared `site.css` and `site.js`; GSAP, ScrollTrigger and Lenis load from CDNs (no build step).
-- Projects page uses a data-attribute-driven lightbox gallery: `[data-gallery]` buttons carry `data-title`, `data-description`, `data-tags`, `data-images`.
+- Projects page detail view: `[data-project="id"]` buttons open a project sheet. Screens come from `assets/projects-web/gallery-data.js` (generated from `manifest.json`); the info column is cloned from `<template id="sheet-id">` in projects.html. Domino's opens in phone-frame mode (screens at native 1x size, never upscaled).
+- Images: WebP copies (max 1600px wide, plus 240px thumbs) live in `assets/projects-web/`; originals in `images/` and `portfolio-assets/` are kept.
+- Resume: `AHMAD FAIZ SYAUQI_RESUME.pdf` at the root, linked from the nav on every page, the home hero and the projects contact row.
 - Group projects must stay labelled as group assignments. Do not imply solo authorship.
 - Gaming and the casual personality are minimal: at most a line in the biography. The headline is "IT Student · UI/UX & Full-Stack Development" (approved by the user, Nov 2026).
-- Undecided: whether to add a downloadable CV/resume, a contact form or email address, or availability dates for internships.
+- Email (faizsyq@gmail.com) and a resume PDF are published. Still undecided: a contact form, or availability dates for internships.
 
 ## Brand Commitments
 
@@ -48,10 +50,14 @@ Breadth backed by real coursework and recognition. Faiz is a well-rounded IT stu
   - DWASPA E-Commerce Web App: full system (front end, back end, database) for a spa and wellness business. CSC584 group assignment, Java EE/JSP/HTML/CSS. `images/DWASPA/`
   - D'WanaConnect System: spa management system UI. ISP640 group assignment, Canva. `images/D'WanaConnect/`
   - Limited Focus Application: support app for OKU (persons with disabilities). ICT554 group assignment and KL3IS 2025 entry, **Silver Medal**. `images/Limited Focus/`
+  - ShutterQ, photography studio booking system: ICT600 group project (team of 5), PHP/MySQL/Bootstrap/JS on XAMPP. Role: UX design & development. GitHub: github.com/rifhanbusy/Photography_Booking. `portfolio-assets/photography-studio-booking/` (only the blurred admin/customer screens may be used).
+  - Domino's Pizza app IA redesign: ICT603 group project (team of 4). Role: UI/UX design. SUS test with 10 users; 90% rated Compare Offers 4 or 5 out of 5 (from the resume). Screens are ~130x300 exports. `portfolio-assets/dominos-app-redesign/`
+  - FitTrack exercise tracker: ICT600 individual assignment, PHP/MySQL/Bootstrap 5/JS. `portfolio-assets/fittrack-exercise-tracker/`
+  - Project details source: `portfolio-assets/PROJECTS.md` and the resume PDF.
 - **Education:** BIT (Hons.) at UiTM (current). Foundation in Engineering at UiTM, CGPA 3.56. High school Pure Science, 7As and 2Bs.
-- **Skills listed:** HTML, CSS, JavaScript, Java (OOP, servlets), SQL/MySQL, C++ basics. Interests in AI/ML and content creation (graphic design, photography, video editing).
-- **Profiles:** GitHub `faizsyq`, LinkedIn, Instagram, TikTok.
-- **Absent, do not fabricate:** testimonials, employer references, internship or work experience, live demo URLs, code repositories for specific projects, individual contribution breakdowns for group work, and metrics.
+- **Skills listed:** HTML, CSS, JavaScript, Java (OOP, servlets), SQL/MySQL, C++ basics. Interests in AI (exploring, not studying machine learning) and content creation (graphic design, photography, video editing).
+- **Profiles:** GitHub `faizsyq`, LinkedIn. (Instagram and TikTok were removed from the site in Nov 2026; do not re-add.)
+- **Absent, do not fabricate:** testimonials, employer references, internship or work experience, live demo URLs, code repositories for specific projects (except the ShutterQ GitHub repo), individual contribution breakdowns for group work, and metrics.
 
 ## Product Principles
 
