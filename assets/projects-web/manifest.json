@@ -948,5 +948,35 @@
    "chapter": "Screens",
    "caption": "Admin's Dashboard"
   }
+ ],
+ "internship-tracker": [
+  {
+   "src": "assets/projects-web/internship-tracker/01-dashboard-light.webp",
+   "thumb": "assets/projects-web/internship-tracker/thumbs/01-dashboard-light.webp",
+   "w": 1600,
+   "h": 1000,
+   "caption": "Desktop: dashboard (light)"
+  },
+  {
+   "src": "assets/projects-web/internship-tracker/02-dashboard-dark.webp",
+   "thumb": "assets/projects-web/internship-tracker/thumbs/02-dashboard-dark.webp",
+   "w": 1600,
+   "h": 1000,
+   "caption": "Desktop: dashboard (dark)"
+  },
+  {
+   "src": "assets/projects-web/internship-tracker/03-mobile-light.webp",
+   "thumb": "assets/projects-web/internship-tracker/thumbs/03-mobile-light.webp",
+   "w": 780,
+   "h": 1688,
+   "caption": "Phone: dashboard (light)"
+  },
+  {
+   "src": "assets/projects-web/internship-tracker/04-mobile-dark.webp",
+   "thumb": "assets/projects-web/internship-tracker/thumbs/04-mobile-dark.webp",
+   "w": 780,
+   "h": 1688,
+   "caption": "Phone: dashboard (dark)"
+  }
  ]
 }

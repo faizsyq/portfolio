@@ -1046,6 +1046,7 @@ h1, h2, h3 { margin: 0; color: var(--paper); font-weight: 700; }
   .stack-card:nth-child(2) { top: calc(var(--header-h) + 34px); }
   .stack-card:nth-child(3) { top: calc(var(--header-h) + 48px); }
   .stack-card:nth-child(4) { top: calc(var(--header-h) + 62px); }
+  .stack-card:nth-child(5) { top: calc(var(--header-h) + 76px); }
   .stack-card__inner { height: min(calc(100vh - var(--header-h) - 100px), 720px); }
   .stack-card .plate { min-height: 0; height: 100%; }
   .stack-card .plate .phone { width: 30%; height: auto; max-height: 100%; }
@@ -1299,6 +1300,27 @@ h1, h2, h3 { margin: 0; color: var(--paper); font-weight: 700; }
 .panel:hover .plate--browsers > .browser:nth-of-type(2) { translate: 17% 23%; }
 .stack-card__inner:hover .plate--single > .browser,
 .panel:hover .plate--single > .browser { translate: 0 -2%; }
+
+/* ---------- desktop + phone combo (Internship Tracker cover) ---------- */
+.plate--combo { display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; padding: 8% 6%; }
+.plate--combo > .browser { grid-area: 1 / 1; width: 84%; translate: -8% -6%; }
+.handset {
+  grid-area: 1 / 1;
+  justify-self: end;
+  align-self: end;
+  width: 22%;
+  margin: 0;
+  padding: 4px;
+  border-radius: 18px;
+  background: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 24px 44px -18px rgba(13, 19, 32, 0.65);
+  transition: translate 0.8s var(--ease-out);
+}
+.handset img { display: block; width: 100%; height: auto; border-radius: 14px; mix-blend-mode: normal; scale: none !important; }
+.stack-card__inner:hover .plate--combo > .browser,
+.panel:hover .plate--combo > .browser { translate: -10% -9%; }
+.stack-card__inner:hover .handset,
+.panel:hover .handset { translate: 2% 3%; }
 
 /* ---------- phone frames at native size (Domino's: ~130x300 exports, never upscaled) ---------- */
 .device {
